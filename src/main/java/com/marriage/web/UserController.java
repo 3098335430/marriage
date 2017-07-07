@@ -1,5 +1,6 @@
 package com.marriage.web;
 
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
@@ -35,7 +36,7 @@ public String login(User user,Map<String, Object> map,HttpSession session) {
     if(resultUser!=null) {
         //跳转regist界面
         session.setAttribute("user", resultUser);
-        return "login_success";
+        return "index";
     } else {
         //跳转到index界面
         //登录时填写的用户数据
@@ -54,7 +55,7 @@ public String regist(Model model,User user){
     if(result=true){  
         //将提示信息存入域中，用以前台显示  
       //  model.addAttribute("msg","恭喜您，注册成功！<br>注册名："+user.getUsername()); 
-        return "regist_success";
+        return "index";
     }else{  
        // model.addAttribute("msg","服务器异常，注册失败！");  
         return "regist";

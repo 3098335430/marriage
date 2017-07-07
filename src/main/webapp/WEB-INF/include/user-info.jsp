@@ -7,7 +7,6 @@
 			<div>
 				<a href="pages/user/login.jsp">登录</a> | 
 				<a href="pages/user/regist.jsp">注册</a> &nbsp;&nbsp;
-				<a href="pages/cart/cart.jsp">购物车</a>
 				<a href="pages/manager/manager.jsp">后台管理</a>
 				<a href="index.jsp">返回商城</a>
 			</div>
@@ -15,9 +14,7 @@
    <c:otherwise>
       <%--登录时显示 	--%>	
 	<div>
-				<span>欢迎<span class="um_span">${loginUser.username }</span>光临书城</span>
-				<a href="pages/cart/cart.jsp">购物车</a>
-				<a href="client/OrderClientServlet?method=orderList">我的订单</a>
+				<span>欢迎<span class="um_span">${loginUser.username }</span>光临网站</span>
 				<a href="client/UserServlet?method=logout">注销</a>&nbsp;&nbsp;
 				<a href="index.jsp">返回</a>
 			</div>	

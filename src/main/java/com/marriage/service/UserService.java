@@ -22,7 +22,7 @@ public interface UserService {
 	 * 
 	 * @return
 	 */
-	List<User> getList();
+	 List<User> getList() ;
 
 	 /**
      * 用户登录的方法

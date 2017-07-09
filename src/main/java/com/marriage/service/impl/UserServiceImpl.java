@@ -16,30 +16,44 @@ public class UserServiceImpl implements UserService {
 	private UserDao userDao;
 
 
-	@Override
 	public User getById(long userId) {
 		return userDao.queryById(userId);
 	}
 
-	@Override
-	public List<User> getList() {
-		return userDao.queryAll(0, 2);
+	public List<User> getList(Integer begin,Integer end) {
+		return userDao.queryAll(begin, end);
 	}
-	@Override
 	public User login(User user) {
 		return userDao.getUserByUsernameAndPassword(user);
 	}
 
-	@Override
 	public boolean regist(User user) {
 	    int count = userDao.saveUser(user);
 		return count > 0;
 	}
    
-	@Override
 	public boolean checkUsername(String username) {
 		User user = userDao.getUserByUsername(username);
 		return user == null;
+	}
+	public int saveUser(User user) {
+		int saveUser=userDao.saveUser(user);
+		return saveUser;
+	}
+
+	public void updateUser(User user) {
+		// TODO Auto-generated method stub
+		userDao.updateUser(user);
+	}
+
+	public void delUser(Integer userId) {
+		// TODO Auto-generated method stub
+		userDao.delUser(userId);
+	}
+
+	public Integer countUser() {
+		// TODO Auto-generated method stub
+		return userDao.countUser();
 	}
 
 	

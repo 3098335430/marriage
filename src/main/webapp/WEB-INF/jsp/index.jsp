@@ -9,6 +9,8 @@
 <body>
 <a href="/pages/document/document.jsp">经典案例</a>
 <a href="/pages/law/law.jsp">婚姻法</a>
-<a href="/pages/user/user_management.jsp">用户管理</a>
+<form action="listUser.do" method="post">
+<input type="submit" value="用户管理" id="sub_btn" />
+</form>
 </body>
 </html>

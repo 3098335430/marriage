@@ -8,23 +8,40 @@ import org.springframework.stereotype.Service;
 import com.marriage.dao.DocumentDao;
 import com.marriage.entity.Document;
 import com.marriage.service.DocumentService;
-
-
 @Service
 public class DocumentServiceImpl implements DocumentService {
-
-	// 注入Service依赖
-	@Autowired
-	private DocumentDao documentDao;
-
-
-	@Override
-	public Document getById(long dId) {
-		return documentDao.getDocumentById(dId);
+@Autowired
+   private DocumentDao documentDao;
+	public Document getById(long did) {
+		// TODO Auto-generated method stub
+		return documentDao.queryById(did);
 	}
 
-	@Override
-	public List<Document> getList() {
-		return documentDao.getDocumentList();
+	public List<Document> getList(Integer begin, Integer end) {
+		// TODO Auto-generated method stub
+		return documentDao.queryAll(begin, end);
 	}
+
+	public int saveDocument(Document document) {
+		// TODO Auto-generated method stub
+		return documentDao.saveDocument(document);
+	}
+
+	public void updateDocument(Document document) {
+		// TODO Auto-generated method stub
+		documentDao.updateDocument(document);
+
+	}
+
+	public void delDocument(Integer did) {
+		// TODO Auto-generated method stub
+		documentDao.delDocument(did);
+
+	}
+
+	public Integer countDocument() {
+		// TODO Auto-generated method stub
+		return documentDao.countDocument();
+	}
+
 }

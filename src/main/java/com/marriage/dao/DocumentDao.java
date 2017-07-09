@@ -1,39 +1,49 @@
 package com.marriage.dao;
 
-import java.awt.print.Book;
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
+import com.marriage.entity.Case;
 import com.marriage.entity.Document;
-import com.marriage.entity.Page;
+
+
 
 public interface DocumentDao {
 	/**
-	 * 向数据库中添加文档
+	 * 通过ID查询文档
+	 * 
+	 * @param id
+	 * @return
 	 */
-	int saveDocument(Document doc);
-	/**
-	 * 根据id从数据库中删除文档
-	 */
-	int delDoc(long docId);
-	/**
-	 * 修改文档
-	 */
-	int updateDoc(Document doc);
+	Document queryById(long id);
 
 	/**
-	 * 获取所有文档
+	 *查询所有文档
 	 */
-	List<Document> getDocumentList();
+	List<Document> queryAll(@Param("offset") int offset, @Param("limit") int limit);
+	
 	/**
-	 * 根据id获取文档
+	 * 向数据库中插入一个文档对象
+	 * @return
 	 */
-	Document getDocumentById(long docId);
-    /**
-     * 通过分页查找文档信息
-     * @param page
-     * @return
-     */
-	Page<Document> findDocument(Page<Document> page);
-    
-
+	int saveDocument(Document document1);
+	
+	
+	/**
+	 * update 文档
+	 */
+	public void updateDocument(Document document);
+	/**
+	 * 删除
+	 * <p>Title: delUser</p>
+	 * <p>Description: </p>
+	 * @param userId
+	 */
+	public void delDocument(Integer did);
+	
+	/**
+	 * 统计类型条数
+	 */
+	public Integer countDocument();
 }

@@ -22,7 +22,7 @@ public interface UserService {
 	 * 
 	 * @return
 	 */
-	 List<User> getList() ;
+	 List<User> getList(Integer begin,Integer end) ;
 
 	 /**
      * 用户登录的方法
@@ -42,5 +42,12 @@ public interface UserService {
 	 * @return
 	 */
 	boolean checkUsername(String username);
-
+	/**
+	 * 新增用户
+	 */
+	int saveUser(User user);
+	
+	public void updateUser(User user);
+	public void delUser(Integer userId);
+	public Integer countUser();
 }

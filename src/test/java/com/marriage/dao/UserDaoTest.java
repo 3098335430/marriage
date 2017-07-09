@@ -6,10 +6,9 @@ import org.junit.Test;
 import org.springframework.aop.ThrowsAdvice;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.marriage.BaseTest;
 import com.marriage.entity.User;
 
-public class UserDaoTest extends BaseTest {
+public class UserDaoTest{
 
 	@Autowired
 	private UserDao userDao;

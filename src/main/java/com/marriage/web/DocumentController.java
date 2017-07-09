@@ -9,18 +9,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.marriage.entity.Document;
 import com.marriage.service.DocumentService;
 
+
 @Controller
-@RequestMapping("document/")
+@RequestMapping("documnet/")
 public class DocumentController {
 
 	@Autowired
     private DocumentService documentService;
 
-@RequestMapping("{did}")
-@ResponseBody
-public Document getById(@PathVariable Integer did) {
-	Document document = documentService.getById(did);
-	return document;
-}
-
+	@RequestMapping("{did}")
+	@ResponseBody
+	public Document getById(@PathVariable Integer did) {
+		Document document = documentService.getById(did);
+		return document;
+	}
+	
 }

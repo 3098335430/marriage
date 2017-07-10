@@ -4,10 +4,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>登陆失败</title>
 </head>
 <body>
-<h1>登陆失败</h1>
-<a href="/pages/user/login.jsp">重新登陆</a>
+<br><br><br><br><br><br><br>
+<center>
+<img src="/static/img/wuya-login.PNG"/>
+<br>
+<a href="/pages/user/login.jsp">尝试重新登陆！</a>
+</center>
+
+
 </body>
 </html>

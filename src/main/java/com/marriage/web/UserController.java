@@ -12,9 +12,16 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
+import com.marriage.entity.Advice;
+import com.marriage.entity.Case;
+import com.marriage.entity.Document;
+import com.marriage.entity.Law;
 import com.marriage.entity.User;
+import com.marriage.service.AdviceService;
+import com.marriage.service.CaseService;
+import com.marriage.service.DocumentService;
+import com.marriage.service.LawService;
 import com.marriage.service.UserService;
 
 
@@ -24,6 +31,14 @@ public class UserController {
 
 	@Autowired
     private UserService userService;
+	@Autowired
+    private CaseService caseService;
+	@Autowired
+    private DocumentService documentService;
+	@Autowired
+    private AdviceService adviceService;
+	@Autowired
+    private LawService lawService;
 
 	@RequestMapping("{uid}")
 	@ResponseBody
@@ -56,6 +71,105 @@ public class UserController {
 	    // 放入jsp路径
 	    return "listUser";
 	}
+	@RequestMapping("listCase")
+	public String getlistCase(HttpServletRequest request){
+		String curr = (String)request.getParameter("curr");
+		Integer begin = 0;
+		Integer end = 2;
+		if(curr != null){
+			Integer currPage = Integer.parseInt(curr);
+			begin = 2 * (currPage - 1);
+			end = 2 * (currPage);
+		}else{
+			curr = "1";
+		}
+	    if(end > caseService.countCase()){
+	    	end =  caseService.countCase();
+	    }
+	    List<Case> cs= caseService.getList(begin,end);
+	    double count = caseService.countCase() / 2.0;
+	    // 放入转发参数
+	    request.setAttribute("cs", cs);
+	    request.setAttribute("curr", curr);
+	    request.setAttribute("countSize", count);
+	    // 放入jsp路径
+	    return "listCase";
+	}
+	@RequestMapping("listDocument")
+	public String getlistDocument(HttpServletRequest request){
+		String curr = (String)request.getParameter("curr");
+		Integer begin = 0;
+		Integer end = 2;
+		if(curr != null){
+			Integer currPage = Integer.parseInt(curr);
+			begin = 2 * (currPage - 1);
+			end = 2 * (currPage);
+		}else{
+			curr = "1";
+		}
+	    if(end > documentService.countDocument()){
+	    	end = documentService.countDocument();
+	    }
+	    List<Document> us= documentService.getList(begin,end);
+	    double count = documentService.countDocument() / 2.0;
+	    // 放入转发参数
+	    request.setAttribute("us", us);
+	    request.setAttribute("curr", curr);
+	    
+	    request.setAttribute("countSize", count);
+	    // 放入jsp路径
+	    return "listDocument";
+	}
+	@RequestMapping("listAdvice")
+	public String getlistAdvice(HttpServletRequest request){
+		String curr = (String)request.getParameter("curr");
+		Integer begin = 0;
+		Integer end = 2;
+		if(curr != null){
+			Integer currPage = Integer.parseInt(curr);
+			begin = 2 * (currPage - 1);
+			end = 2 * (currPage);
+		}else{
+			curr = "1";
+		}
+	    if(end > adviceService.countAdvice()){
+	    	end = adviceService.countAdvice();
+	    }
+	    List<Advice> us= adviceService.getList(begin,end);
+	    double count = adviceService.countAdvice() / 2.0;
+	    // 放入转发参数
+	    request.setAttribute("us", us);
+	    request.setAttribute("curr", curr);
+	    
+	    request.setAttribute("countSize", count);
+	    // 放入jsp路径
+	    return "listAdvice";
+	}
+	@RequestMapping("listLaw")
+	public String getlistLaw(HttpServletRequest request){
+		String curr = (String)request.getParameter("curr");
+		Integer begin = 0;
+		Integer end = 2;
+		if(curr != null){
+			Integer currPage = Integer.parseInt(curr);
+			begin = 2 * (currPage - 1);
+			end = 2 * (currPage);
+		}else{
+			curr = "1";
+		}
+	    if(end > lawService.countLaw()){
+	    	end = lawService.countLaw();
+	    }
+	    List<Law> us= lawService.getList(begin,end);
+	    double count = lawService.countLaw() / 2.0;
+	    // 放入转发参数
+	    request.setAttribute("us", us);
+	    request.setAttribute("curr", curr);
+	    
+	    request.setAttribute("countSize", count);
+	    // 放入jsp路径
+	    return "listLaw";
+	}
 	
 	@RequestMapping("login")
 	public String login(User user,Map<String, Object> map,HttpSession session) {
@@ -71,7 +185,7 @@ public class UserController {
 	        map.put("user", user);
 	        //错误信息
 	        map.put("error", "用户名或密码错误，请重新填写");
-	        return "login";
+	        return "login_failure";
 	    }
 	}
 	
@@ -86,7 +200,7 @@ public class UserController {
 	        return "index";
 	    }else{  
 	       // model.addAttribute("msg","服务器异常，注册失败！");  
-	        return "regist";
+	        return "regist_failure";
 	    }   
 	}  
 
@@ -111,7 +225,7 @@ public class UserController {
 		Integer userId = Integer.parseInt(userid);
 		User user = userService.getById(userId);
 		request.setAttribute("user", user);
-	    return "update";
+	    return "update_user";
 	}
 	@RequestMapping("delUser")
 	public String delUser(HttpServletRequest request){

@@ -7,10 +7,20 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="/pages/document/document.jsp">经典案例</a>
-<a href="/pages/law/law.jsp">婚姻法</a>
+<form action="listDocument.do" method="post">
+<input type="submit" value="经典案例" id="sub_btn" />
+</form>
+<form action="listAdvice.do" method="post">
+<input type="submit" value="建议" id="sub_btn" />
+</form>
+<form action="listLaw.do" method="post">
+<input type="submit" value="婚姻法" id="sub_btn" />
+</form>
 <form action="listUser.do" method="post">
 <input type="submit" value="用户管理" id="sub_btn" />
+</form>
+<form action="listCase.do" method="post">
+<input type="submit" value="案件类型" id="sub_btn" />
 </form>
 </body>
 </html>

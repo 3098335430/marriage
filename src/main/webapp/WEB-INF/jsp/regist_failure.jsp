@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>经典案例</h1>
+<center>
+<img src="/static/img/wuya-regist.PNG"/>
+<br>
+<a href="pages/user/regist.jsp">重新注册</a>
+</center>
 </body>
 </html>

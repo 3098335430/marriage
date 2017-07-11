@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.marriage.dao.LawDao">
+	<!-- 目的：为dao接口方法提供sql语句配置 -->
+	<select id="queryById" resultType="Law" parameterType="long">
+		<!-- 具体的sql -->
+		SELECT
+			lid,
+            law,
+            CaseId
+		FROM
+			law
+		WHERE
+			lid = #{lid}
+	</select>
+	
+	<select id="queryAll" resultType="Law">
+		SELECT
+			lid,
+            law,
+            CaseId
+		FROM
+			law
+		ORDER BY
+			lid
+		LIMIT #{offset}, #{limit}
+	</select>
+ <!-- 添加一条新记录,默认返回值是int，无法修改 -->  
+    <insert id="saveLaw"   parameterType="Law" >  
+        insert into law(law) values(#{law})  
+    </insert>  
+	<update id="updateLaw" parameterType="Law">
+		update law
+		set law = #{law}
+		where lid = #{lid}
+	</update>
+	
+	<delete id="delLaw" parameterType="int">
+		delete from law
+		where lid = #{lid}
+	</delete>
+	
+	<select id="countLaw" resultType="int">
+		select count(1)
+		from law
+	</select>
+</mapper>

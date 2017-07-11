@@ -170,6 +170,14 @@ public class UserController {
 	    // 放入jsp路径
 	    return "listLaw";
 	}
+	@RequestMapping("index1")
+	public String getIndex1(){
+		return "index1";
+	}
+	@RequestMapping("index")
+	public String getIndex(){
+		return "index";
+	}
 	
 	@RequestMapping("login")
 	public String login(User user,Map<String, Object> map,HttpSession session) {

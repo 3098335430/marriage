@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.marriage.dao.DocumentDao">
+	<!-- 目的：为dao接口方法提供sql语句配置 -->
+	<select id="queryById" resultType="Document" parameterType="long">
+		<!-- 具体的sql -->
+		SELECT
+		     did ,
+             title,
+             content,
+             CaseId,
+             label
+		FROM
+			document
+		WHERE
+			did = #{did}
+	</select>
+	
+	<select id="queryAll" resultType="Document">
+		SELECT
+			did ,
+             title,
+             content,
+             CaseId,
+             label
+		FROM
+			document
+		ORDER BY
+			did
+		LIMIT #{offset}, #{limit}
+	</select>
+ <!-- 添加一条新记录,默认返回值是int，无法修改 -->  
+    <insert id="saveDocument"   parameterType="Document" >  
+        insert into document(title,content,label) values(#{title},#{content},#{label})  
+    </insert>  
+	<update id="updateDocument" parameterType="Document">
+		update document
+		set title = #{title},content=#{content},CaseId=#{CaseId},label=#{label}
+		where did = #{did}
+	</update>
+	
+	<delete id="delDocument" parameterType="int">
+		delete from document
+		where did = #{did}
+	</delete>
+	
+	<select id="countDocument" resultType="int">
+		select count(1)
+		from document
+	</select>
+</mapper>

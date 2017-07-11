@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.marriage.dao.CaseDao">
+	<!-- 目的：为dao接口方法提供sql语句配置 -->
+	<select id="queryById" resultType="Case" parameterType="long">
+		<!-- 具体的sql -->
+	SELECT cid,type FROM `case` WHERE cid=#{cid}
+	</select>
+	
+	<select id="queryAll" resultType="Case">
+		SELECT
+			cid,
+			type
+		FROM
+			case
+		ORDER BY
+			cid
+		LIMIT #{offset}, #{limit}
+	</select>
+ <!-- 添加一条新记录,默认返回值是int，无法修改 -->  
+    <insert id="saveCase"   parameterType="Case" >  
+        insert into case(type) values(#{type})  
+    </insert>  
+	<update id="updateCase" parameterType="Case">
+		update case
+		set type = #{type}
+		where cid = #{cid}
+	</update>
+	
+	<delete id="delCase" parameterType="int">
+		delete from case
+		where cid = #{cid}
+	</delete>
+	
+	<select id="countCase" resultType="int">
+		SELECT COUNT(*) from `case`
+	</select>
+</mapper>

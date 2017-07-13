@@ -28,4 +28,5 @@ public interface DocumentService {
 	public void updateDocument(Document document);
 	public void delDocument(Integer did);
 	public Integer countDocument();
+	public List<Document> getByWord(String word);
 }

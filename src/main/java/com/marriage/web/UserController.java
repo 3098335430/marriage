@@ -120,6 +120,12 @@ public class UserController {
 	    // 放入jsp路径
 	    return "listDocument";
 	}
+	@RequestMapping("detailDocumentWord")
+	public String detailDocumentWord(String title,HttpServletRequest request){
+		List<Document> document=documentService.getByWord(title);
+		request.setAttribute("document", document);
+	    return "detailDocumentWord";
+	}
 	@RequestMapping("listAdvice")
 	public String getlistAdvice(HttpServletRequest request){
 		String curr = (String)request.getParameter("curr");

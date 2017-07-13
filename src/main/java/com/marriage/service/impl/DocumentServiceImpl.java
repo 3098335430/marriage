@@ -44,4 +44,9 @@ public class DocumentServiceImpl implements DocumentService {
 		return documentDao.countDocument();
 	}
 
+	public List<Document> getByWord(String word) {
+		// TODO Auto-generated method stub
+		return documentDao.getByWord(word);
+	}
+
 }

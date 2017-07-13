@@ -46,4 +46,8 @@ public interface DocumentDao {
 	 * 统计类型条数
 	 */
 	public Integer countDocument();
+	/**
+	 * 根据关键字查询文档
+	 */
+	public List<Document> getByWord(String word);
 }

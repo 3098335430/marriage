@@ -26,7 +26,7 @@
 
 </head>
 <body>
-	<div class="form">
+	<div class="form.itxt">
 		<form action="/document/addDocument.do" method="post">
 			<label>文档名：</label> 
 			<input value="${param.title }" class="itxt"

@@ -166,7 +166,7 @@ body, button, input, select, textarea {
 				<div class="fr w680 pr z-10">
 					<div class="m-hd-seek">
 						<p class="clearfix">
-							<a href="javascript:;" class="btn-blue2 fr"
+							<a href="detailDocumentWord.do?title=裁定书" class="btn-blue2 fr"
 								onclick="search_click();">搜索</a> <input type="text" class="s-wb"
 								placeholder="请输入您想要查找的内容" id="top-seek" />
 						</p>
@@ -186,7 +186,7 @@ body, button, input, select, textarea {
 						<input type="submit" value="经典案例" id="sub_btn" />
 					</form>
 				</li>
-				<li><a href="/pages/user/user_detail.jsp" class="">个人中心</a></li>
+				<li><a href="toUpdateUser.do?userId=${user.userId}" class="">个人中心</a></li>
 				<li>
 					<form action="index1.do" method="post">
 						<input type="submit" value="后台管理" id="sub_btn" />
@@ -467,7 +467,6 @@ body, button, input, select, textarea {
 
 	<script type="text/javascript"
 		src="http://cache.66law.cn/js/tiaoli/tiaoli.js"></script>
-
 	<script type="text/javascript">
 		window._bd_share_config = {
 			"common" : {
@@ -526,20 +525,7 @@ body, button, input, select, textarea {
 			});
 		});
 
-		function search_click() {
-			try {
-				var key = document.getElementById("top-seek").value;
-				if (key == "请输入您想要查找的内容")
-					key = "";
-				if (key == "" || key.length <= 0) {
-					window.open("http://s.66law.cn/");
-				} else {
-					window.open("http://s.66law.cn/cse/search?q=" + key
-							+ "&s=18259188589626635806&nsid=1");
-				}
-			} catch (e) {
-			}
-		}
+		
 	</script>
 
 	<script type="text/javascript"

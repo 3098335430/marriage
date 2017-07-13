@@ -45,4 +45,5 @@ public interface CaseDao {
 	 * 统计类型条数
 	 */
 	public Integer countCase();
+
 }

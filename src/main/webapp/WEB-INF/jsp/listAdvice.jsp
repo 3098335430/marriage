@@ -52,6 +52,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div id="header">
 		<img class="logo_img" alt="" src="static/img/logo.png"> <span
 			class="wel_word">婚姻法</span>
+			 <%@ include file="/WEB-INF/include/manager-info.jsp" %>
 	</div>
 	<div id="main">
 		<table>

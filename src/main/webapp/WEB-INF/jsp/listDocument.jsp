@@ -4,6 +4,7 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -71,14 +72,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</tr>
 					<c:forEach items="${us}" var="document">
 						<tr>
-							<td>${document.title}</td>
-							<td>${document.content}</td>
+							<td>${fn:substring(document.title,0,15)}</td>
+							<td>${fn:substring(document.content,0,15)}</td>
 							<td>${document.label}</td>
+							<td><a href="document/toUpdateDocument?did=${document.did}">修改</a>
+							</td>
 							<td>
-							<a
-								href="document/toUpdateDocument?did=${document.did}">修改</a></td>
-							<td><a class="delA"
-								href="document/delDocument?did=${document.did}">删除</a></td>
+							<a class="delA" href="document/delDocument?did=${document.did}">删除</a>
+							</td>
+							<td>
+							<a  href="document/detailDocument?did=${document.did}">查看详情</a>
+							</td>
 						</tr>
 					</c:forEach>
 

@@ -1,5 +1,6 @@
 package com.marriage.web;
 
+import java.io.UnsupportedEncodingException;
 import java.util.List;
 import java.util.Map;
 
@@ -121,9 +122,11 @@ public class UserController {
 	    return "listDocument";
 	}
 	@RequestMapping("detailDocumentWord")
-	public String detailDocumentWord(String title,HttpServletRequest request){
+	public String detailDocumentWord(String title,HttpServletRequest request) throws Exception{
+		request.setCharacterEncoding("UTF-8");
 		List<Document> document=documentService.getByWord(title);
 		request.setAttribute("document", document);
+		System.out.println(document);
 	    return "detailDocumentWord";
 	}
 	@RequestMapping("listAdvice")

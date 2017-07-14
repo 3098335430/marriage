@@ -62,9 +62,9 @@ public class DocumentController {
 		String docid =  (String) request.getParameter("did");
 		Integer did = Integer.parseInt(docid);
 		Document document=documentService.getById(did);
-		
-		request.setAttribute("document.title", document.getTitle());
-		request.setAttribute("document.content", document.getContent());
+		System.out.println( document.getTitle());
+		request.setAttribute("title", document.getTitle());
+		request.setAttribute("content", document.getContent());
 	    return "detailDocument";
 	}
 

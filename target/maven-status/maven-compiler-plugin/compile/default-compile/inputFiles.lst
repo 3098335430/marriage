@@ -23,10 +23,12 @@ E:\项目\template-marriage\marriage\src\main\java\com\marriage\service\Document
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\service\impl\CaseServiceImpl.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\entity\Page.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\web\DocumentController.java
+E:\项目\template-marriage\marriage\src\main\java\com\springmvc\controller\LoginController.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\service\impl\LawServiceImpl.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\service\CaseService.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\web\UserController.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\dao\LawDao.java
+E:\项目\template-marriage\marriage\src\main\java\com\springmvc\controller\RegisteredController.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\dto\Result.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\web\LawController.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\service\impl\DocumentServiceImpl.java

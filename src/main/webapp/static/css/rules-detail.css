@@ -1,0 +1,124 @@
+@charset "gb2312";
+/* CSS Document */
+body{ background:#F8F8F8; }
+.weizhi{ color:#999; }
+.weizhi a{ color:#888; }
+
+/*内容*/
+.wrap{ margin:0 auto; width:990px; overflow:hidden; }
+.l-w750, .r-w225{ float:left; }
+.l-w750{ width:750px; margin-right:240px; }
+.r-w225{ width:225px; margin-left:-225px; }
+.mt10{ margin-top:10px; }
+.mt15{ margin-top:15px; }
+.mt20{ margin-top:20px; }
+.mt30{ margin-top:30px; }
+	/*标题*/
+.tl-h{ position:relative; overflow:hidden; }
+.tl-title{ width:580px; font:28px/36px "Microsoft YaHei"; color:#545454; }
+.fenxiang{ float:left; position:absolute; width:170px; right:0; bottom:2px; }
+	/*目录*/
+.tl-k{ border:1px solid #ddd; background:#fff; padding:100px 0 0 0; box-shadow:0px 0px 20px #ddd; position:relative; z-index:1000; zoom:1; margin-bottom:10px; }
+.tl-ml{ float:left; position:absolute; left:-11px; top:30px; z-index:2; height:40px; padding:0 30px; background:#1C7BBF; 
+		font:bold 16px/40px "Microsoft YaHei"; color:#fff; }
+.tl-ml-bg{ float:left; position:absolute; left:-21px; top:50px; z-index:1; width:20px; height:30px; background:#035B9A; }
+		/*目录列表*/
+.tl-mulu{ overflow:hidden; padding-bottom:30px; overflow:hidden; background:url(/pic/rules/tl-line.jpg) no-repeat bottom; }
+.tl-mulu .tl-ml-list, .tl-mulu .tl-ml-list li{ display:block; line-height:24px; }
+.tl-mulu .tl-ml-list{ padding-left:24px;  }
+.tl-mulu .duolie{ padding-left:0; }
+.tl-ml-list li{ height:24px; overflow:hidden; }
+.tl-ml-list li.zhang{ font-size:14px; }
+.tl-ml-list li.zhang a{ color:#666; }
+.tl-ml-list li.jie{ padding-left:50px; }
+.tl-ml-list li.jie a{ color:#999; }
+.tl-ml-list li a:hover{ color:#07519a; text-decoration:none; }
+.tl-ml-list .tl-ml-k{ float:left; width:200px; padding:0 24px; *padding:0 12px; *width:224px; border-right:1px solid #ddd; }
+.tl-ml-list .nobor{ border-right:none; }
+		/*条例内容*/
+.tl-nr{ padding:0 24px 30px 24px; }
+.tl-nr h3{ border-left:5px solid #1C7BBF; background:#F6F6F6; padding:14px 10px; font:bold 16px/24px "Microsoft YaHei"; color:#1C7BBF;
+		   margin-top:30px;  }
+.tl-nr h2{ height:40px; border-left:5px solid #1C7BBF; background:#F6F6F6; padding-left:14px; font:bold 16px/40px "Microsoft YaHei"; color:#1C7BBF;
+           margin-top:30px;  }
+.tl-nr h4{ font-size:14px; font-weight:bold; line-height:20px; color:#333; padding-left:20px; margin-top:30px; }
+.tl-nr p{ padding-left:20px;padding-right: 20px; font-size:14px; line-height:30px; color:#666; margin-top:20px; text-indent:2em; }
+
+	/*right*/
+.fb-zx{ display:block; height:80px; overflow:hidden; }
+.tbor{ border-top:1px solid #ddd; }
+.qt-xg{ padding-top:15px; }
+.qt-xg .xg-tit{ font:16px/20px "Microsoft YaHei"; color:#333; }
+.qt-xg .xg-list, .qt-xg .xg-list li{ display:block; }
+.qt-xg .xg-list{ margin-top:10px; }
+.qt-xg .xg-list li{ height:26px; overflow:hidden; color:#999;  } 
+.qt-xg .xg-list li a{ line-height:26px; color:#888; }
+.qt-xg .xg-list li a:hover{ color:#07519a; text-decoration:none; }
+		/*律师列表*/
+.lawyer-list{ margin-top:15px; }
+.ls-k{ float:left; width:64px; margin:0 16px 8px 0; }
+.ls-k dt, .ls-k dd, .ls-k dd span, .ls-k dd i{ display:block; }
+.ls-k dt{ height:64px; overflow:hidden; margin-bottom:5px; }
+.ls-k dd span, .ls-k dd i{ height:16px; overflow:hidden; text-align:center; margin-bottom:3px; }
+.ls-k dd span a{ line-height:16px; color:#07519a; }
+.ls-k dd i{ color:#545454; }
+.ls-k dd a.ls-btn{ display:inline-block; width:62px; height:22px; background:url(/pic/rules/zx-btn.jpg) no-repeat; margin-top:2px; }
+.lawyer-list .mr0{ margin-right:0; }
+		/*浮动*/
+.sidebar{ width:225px; }
+.sidebar-fixed{ position:fixed; z-index:9999; left:50%; bottom:0; margin-left:270px; _position:static; _left:0; _margin:20px 0 0 0; }
+.sidebar-bottom{ position: relative;bottom: 0px;left: 50%; }
+.bar-k{ height:310px; overflow:hidden; position:relative; }
+.s-l{ position:absolute; left:0; top:0; height:310px; width:2px; border-left:1px solid #ddd; }
+.s-l .s-l2{ float:left; height:310px; width:2px; border-left:1px solid #fff; }
+.s-mulu{ display:block; height:300px; padding:5px 0; overflow:hidden; }
+.s-mulu .s-ml-k{ display:block; width:225px; height:300px; overflow:scroll; overflow-x:hidden; }
+.s-mulu .s-ml-k .s-zj{ height:30px; line-height:30px; position:relative; display:block; padding-left:10px; }
+.s-mulu .s-ml-k .s-zj em{ position:absolute; left:0; top:0; width:2px; height:30px; }
+.s-mulu .s-ml-k .s-zj a{ display:block; height:30px; overflow:hidden; }
+.s-mulu .s-ml-k .s-zj a.z-ml{ font-size:14px; color:#666; padding-left:10px; }
+.s-mulu .s-ml-k .s-zj a.j-ml{ font-size:12px; color:#999; padding-left:60px; }
+.s-mulu .s-ml-k .s-zj a:hover{ text-decoration:none; }
+.s-mulu .s-ml-k .s-on a{ background:#EFEFEF; }
+.s-mulu .s-ml-k .s-on a.z-ml, .s-mulu .s-ml-k .s-on a.j-ml{ color:#2E78BF; }
+.s-mulu .s-ml-k .s-on em{ background:#3177BF; }
+.s-mulu .s-ml-k .s-zj a:hover{ background:#EFEFEF; }
+.s-mulu .s-ml-k .s-zj a:hover{ color:#2E78BF; }
+
+
+		/* tl-float-bar */
+.tl-float-bar{ width:40px; margin-top:10px;height: 164px; }
+.folat-tim{ float:left; position:relative; width:40px; height:40px; margin-bottom:1px; }
+.folat-tim .f-ml{ display:block; height:40px; background:url(/pic/rules/tl-float-bar.png) no-repeat 0 0 #E2DEDF; }
+.folat-tim .f-sc{ display:block; height:40px; background:url(/pic/rules/tl-float-bar.png) no-repeat 0 -41px #E2DEDF; }
+.folat-tim .f-fx{ display:block; height:40px; background:url(/pic/rules/tl-float-bar.png) no-repeat 0 -82px #E2DEDF; }
+.folat-tim .f-top{ display:block; height:40px; background:url(/pic/rules/tl-float-bar.png) no-repeat 0 -123px #E2DEDF; }
+.folat-tim .f-ml:hover{ background:url(/pic/rules/tl-float-bar.png) no-repeat 0 0 #4491EB; }
+.folat-tim .f-sc:hover{ background:url(/pic/rules/tl-float-bar.png) no-repeat 0 -41px #4491EB; }
+.folat-tim .f-fx:hover, .fd-on .f-fx{ background:url(/pic/rules/tl-float-bar.png) no-repeat 0 -82px #4491EB; }
+.folat-tim .f-top:hover{ background:url(/pic/rules/tl-float-bar.png) no-repeat 0 -123px #4491EB; }
+.fd-on .pf-fx{ float:left; position:absolute; left:40px; bottom:0; width:120px; height:28px; background:#fff; 
+			   padding:6px 10px 4px 10px; border:1px solid #4491EB; }
+			   
+/* jScrollPane  */			   
+/* * CSS Styles that are needed by jScrollPane for it to operate correctly. * * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane * may not operate correctly without them. */
+.jspContainer{overflow:hidden;position:relative;}
+.jspPane{position:absolute;}
+.jspVerticalBar{position:absolute;top:0;right:0;width:10px;height:100%;background:red;}
+.jspHorizontalBar{position:absolute;bottom:0;left:0;width:100%;height:16px;background:red;}
+.jspVerticalBar *,.jspHorizontalBar *{margin:0;padding:0;}
+.jspCap{display:none;}
+.jspHorizontalBar .jspCap{float:left;}
+.jspTrack{background:#F2F4F8;position:relative;}
+.jspDrag{background:#79a1b5;position:relative;top:0;left:0;width:10px;cursor:pointer;/*border:1px solid #56839a;*/-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+.jspHorizontalBar .jspTrack,.jspHorizontalBar .jspDrag{float:left;height:100%;}
+.jspArrow{background:#50506d;text-indent:-20000px;display:block;cursor:pointer;}
+.jspArrow.jspDisabled{cursor:default;background:#80808d;}
+.jspVerticalBar .jspArrow{height:16px;}
+.jspHorizontalBar .jspArrow{width:16px;float:left;height:100%;}
+.jspVerticalBar .jspArrow:focus{outline:none;}
+.jspCorner{background:#eeeef4;float:left;height:100%;}
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner{margin:0 -3px 0 0;}
+
+/* end of jScrollPane  */			 

@@ -1,4 +1,4 @@
-package com.springmvc.controller;
+package com.marriage.web;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.marriage.entity.User;
 import com.marriage.service.UserService;
+
 
 @Controller
 @RequestMapping("LoginController")

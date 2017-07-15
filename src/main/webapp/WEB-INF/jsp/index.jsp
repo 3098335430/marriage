@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<base
+href="http://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,38 +9,17 @@
 <title>最新婚姻法全文（2017最新版本）-华律网</title>
 <meta name="keywords" content="最新婚姻法全文（2017最新版本）" />
 <meta name="Description" content="" />
-<link rel="stylesheet" type="text/css"
-	href="http://cache.66law.cn/css/question/ytyw.css" />
-<link rel="stylesheet" type="text/css"
-	href="http://cache.66law.cn/css/tiaoli/base.css" />
-<link rel="stylesheet" type="text/css"
-	href="http://cache.66law.cn/css/tiaoli/rules-detail.css" />
-
-
-<link rel="stylesheet"
-	href="http://css.66law.cn/public/communal/base_v.2.0.css" />
-<link rel="stylesheet"
-	href="http://css.66law.cn/public/communal/unit_v.2.0.css" />
-<link rel="stylesheet"
-	href="http://css.66law.cn/public/communal/headfooter_v.2.0.css" />
-
-
-<script type="text/javascript" src="http://cache.66law.cn/js/jquery.js"></script>
-
+<link rel="stylesheet" href="static/css/ytyw.css">
+<link rel="stylesheet" href="static/css/rules-detail.css">
+<link rel="stylesheet" href="static/css/base_v.2.0.css">
+<link rel="stylesheet" href="static/css/unit_v.2.0.css">
+<link rel="stylesheet" href="static/css/headfooter_v.2.0.css">
+<script type="text/javascript" src="static/script/jquery.js"></script>
 
 <style type="text/css">
 body, button, input, select, textarea {
 	font: 12px/20px tahoma, \5FAE\8F6F\96C5\9ED1;
 }
-
-.ico-p-con {
-	display: inline-block;
-	overflow: hidden;
-	vertical-align: middle;
-	background: url(http://css.66law.cn/images/question/ico-p-con.png)
-		no-repeat;
-}
-
 .i-p-con5 {
 	width: 20px;
 	height: 20px;
@@ -50,105 +31,6 @@ body, button, input, select, textarea {
 	height: 20px;
 	background-position: -50px -20px;
 }
-
-.ask-fixed {
-	right: 5px;
-	bottom: 10px;
-	_position: absolute;
-}
-
-.ask-fixed .ask-zk {
-	display: block;
-	width: 36px;
-	height: 108px;
-	background: url(/images/question/ask-zk.png) no-repeat;
-}
-
-.ask-zk .close-piaofu {
-	position: absolute;
-	left: 0;
-	top: 0;
-	display: block;
-	width: 36px;
-	height: 21px;
-	z-index: 2;
-	cursor: pointer;
-}
-
-.ask-zk .show-piaofu {
-	position: absolute;
-	left: 6px;
-	top: 21px;
-	display: block;
-	width: 30px;
-	height: 87px;
-	cursor: pointer;
-}
-
-.ask-fixed .ask-box {
-	padding: 5px;
-	width: 215px;
-	background-color: #4b93d7;
-	border-radius: 3px;
-}
-
-.ask-box .p5 {
-	padding: 5px;
-	color: #fff;
-	font-size: 18px;
-}
-
-.ask-srk {
-	position: relative;
-	padding: 10px;
-	height: 210px;
-	background-color: #fff;
-}
-
-.ask-srk textarea {
-	width: 100%;
-	height: 144px;
-	overflow-y: auto;
-}
-
-.ask-srk .u-btn {
-	display: inline-block;
-	height: 38px;
-	padding: 0 28px;
-	font-size: 14px;
-	line-height: 38px;
-	color: #666;
-	background-color: #fff;
-	border: 2px solid #eaeaea;
-	border-radius: 21px;
-}
-
-.ask-srk .u-btn:hover {
-	border-color: #63afee;
-	color: #63afee;
-}
-
-.ask-srk .u-btn-be {
-	border-color: #4c92d7;
-	background-color: #4c92d7;
-	color: #fff;
-}
-
-.ask-srk .u-btn-be:hover {
-	border-color: #63afee;
-	background-color: #63afee;
-	color: #fff;
-}
-
-.ask-hint {
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 5px;
-	text-align: center;
-	color: #f63030;
-}
-
 .logobar h1 {
 	font-size: 22px;
 }
@@ -182,13 +64,13 @@ body, button, input, select, textarea {
 				<li><a href="javascript:location.reload();">首页</a></li>
 				<li><a href="javascript:location.reload();" class="hd-mu-ct">婚姻法</a></li>
 				<li>
-					<form action="listDocument.do" method="post">
+					<form action="user/listDocument.do" method="post">
 						<input type="submit" value="经典案例" id="sub_btn" />
 					</form>
 				</li>
-				<li><a href="toUpdateUser.do?userId=${user.userId}" class="">个人中心</a></li>
+				<li><a href="user/toUpdateUser.do?userId=${user.userId}" class="">个人中心</a></li>
 				<li>
-					<form action="index1.do" method="post">
+					<form action="user/index1.do" method="post">
 						<input type="submit" value="后台管理" id="sub_btn" />
 					</form>
 				</li>
@@ -393,26 +275,6 @@ body, button, input, select, textarea {
 			<!--right-->
 			<div class="r-w225">
 
-				<div class="qt-xg tbor mt15">
-					<div class="ask-fixed">
-						<div class="ask-box">
-							<div class="p5 clearfix">
-								<i class="ico-p-con i-p-con5 mr5"></i><span>问律师</span>
-							</div>
-							<div class="mt10 ask-srk">
-								<textarea id="piaofu-content" maxlength="1000"
-									placeholder="请输入案情经过和维权诉求，尽量详实以得到更精准的解答 （问题描述越详细，律师回复质量越高）"></textarea>
-								<p class="tc">
-									<a href="javascript:void(0);" class="u-btn u-btn-be"
-										id="piaofu-btn" attr-state="0">提交咨询</a>
-								</p>
-								<p class="ask-hint" style="display: none;">你描述的信息过于简单，请整理您的提问！</p>
-								<!--咨询问题，不得少于10个字符-->
-							</div>
-						</div>
-					</div>
-				</div>
-
 				<div id="floatTag">&nbsp;</div>
 
 				<div id="ctn-floatNav" class="sidebar sidebar-fixed"
@@ -456,286 +318,9 @@ body, button, input, select, textarea {
 	</div>
 	<!--footer-->
 	<div id="footer"></div>
+<script type="text/javascript" src="static/script/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="static/script/tiaoli.js"></script>
 
-	<script type="text/javascript" src="http://cache.66law.cn/common.js"></script>
-
-	<script type="text/javascript"
-		src="http://cache.66law.cn/js/jquery.mousewheel.js"></script>
-
-	<script type="text/javascript"
-		src="http://cache.66law.cn/js/jquery.jscrollpane.min.js"></script>
-
-	<script type="text/javascript"
-		src="http://cache.66law.cn/js/tiaoli/tiaoli.js"></script>
-	<script type="text/javascript">
-		window._bd_share_config = {
-			"common" : {
-				"bdSnsKey" : {},
-				"bdText" : "",
-				"bdMini" : "2",
-				"bdMiniList" : false,
-				"bdPic" : "",
-				"bdStyle" : "1",
-				"bdSize" : "16"
-			},
-			"share" : {}
-		};
-
-		$("head").append(
-				$("<script>").attr(
-						"src",
-						'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='
-								+ ~(-new Date() / 36e5)));
-
-		$(function() {
-
-			// common.runJs('http://cache.66law.cn/js/piaofu4.js', function() {
-			//   console.log('piaofu is load');
-			// });
-
-			$('#ul_menu > a,.s-zj a').click(
-					function() {
-						var isSub = $(this).hasClass("j-ml") ? "FloatMenu"
-								: "MainMenu";
-						window['_hmt']
-								&& window['_hmt'].push([ '_trackEvent',
-										'tiaoli_classinfo', "UserClickFrom",
-										isSub ]);
-					});
-
-			var timer = null;
-			// 快速咨询
-			$("#hd-online-zx").hover(function() {
-				$('.hd-zx-pop').show();
-			}, function() {
-				timer = setTimeout(function() {
-					$('.hd-zx-pop').hide();
-				}, 300);
-			});
-
-			$('.hd-zx-pop').on('mouseover', function() {
-				clearTimeout(timer);
-				$(this).show();
-			}).on('mouseleave', function() {
-				$(this).hide();
-			});
-
-			$("#hd-f-zx").click(function() {
-				$(this).parent(".hd-zx-pop").hide();
-			});
-		});
-
-		
-	</script>
-
-	<script type="text/javascript"
-		src="http://cache.66law.cn/js/jquery-1.8.2.min.js"></script>
-
-	<script type="text/javascript">
-		function getint(s) {
-			try {
-				return parseInt(s);
-			} catch (ex) {
-				return 0;
-			}
-		}
-		document.domain = '66law.cn';
-		var $btnShow = $(".ask-zk .show-piaofu");
-		var $btnClose = $(".ask-zk .close-piaofu");
-		var $btnHide = $(".ask-box .close");
-		function docheck(e) {
-			var title = $(e).attr('title');
-			if (title.length > 0) {
-				if ($(e).val() == title) {
-					$(e).val('');
-				}
-			}
-		}
-		function bridge(fun, args) {
-			try {
-				window.parent['QuestionBar']
-						&& window.parent['QuestionBar'][fun]
-						&& window.parent['QuestionBar'][fun].apply(
-								window.parent['QuestionBar'], args || []);
-			} catch (e) {
-				console.log(e);
-			}
-		}
-
-		function show(innercall) {
-			if (innercall) {
-				bridge('show');
-			} else {
-				$btnShow.triggerHandler('click', {
-					'cancel' : true
-				});
-			}
-		}
-
-		function hide(innercall) {
-			if (innercall) {
-				bridge('hide');
-			} else {
-				$btnHide.triggerHandler('click', {
-					'cancel' : true
-				});
-			}
-		}
-
-		$(function() {
-			var tcode = "zixun";
-			try {
-				var prul = parent.location.href;
-
-				var arry1 = prul.split('/'); //console.log(arry1);
-				if (arry1.length > 1) {
-					//                	alert(arry1[3]);
-					switch (arry1[3]) {
-					case 'question':
-						tcode = "question_piaofu";
-						break;
-					case 'laws':
-						tcode = "law_piaofu";
-						break;
-					case 'lawwrit':
-					case 'lawarticle':
-					case 'domainblog':
-					case 'contractmodel':
-						break;
-					case 'topics':
-						tcode = "topics_piaofu";
-						break;
-					case 'topic2010':
-						tcode = "topic2010_piaofu";
-						break;
-					case 'juhe':
-						tcode = "juhe_piaofu";
-						break;
-					default:
-						tcode = arry1[3] + '_piaofu';
-						break;
-					}
-				}
-			} catch (e) {
-
-			}
-			$btnShow.on('click', function(e, data) {
-				$(this).parent().addClass("none");
-				$(this).parent().parent(".ask-fixed").find(".ask-box")
-						.removeClass("none");
-				if (data && data['cancel'])
-					return;
-				show(true);
-			});
-			$btnClose.click(function() {
-				$('.ask-zk').addClass("none");
-				bridge('close');
-			});
-			$btnHide.on('click', function(e, data) {
-				$(this).parents(".ask-box").addClass("none");
-				$(this).parents(".ask-fixed").find(".ask-zk").removeClass(
-						"none");
-				if (data && data['cancel'])
-					return;
-				hide(true);
-			});
-			//漂浮咨询提交
-			$('#piaofu-btn')
-					.on(
-							'click',
-							function() {
-								var val = $.trim($('#piaofu-content').val());
-								if (val.length > 0) {
-									if (val == '请输入案情经过和维权诉求，尽量详实以得到更精准的解答 （问题描述越详细，律师回复质量越高）') {
-										gourl('http://www.66law.cn/question/add.aspx?t_code='
-												+ tcode);
-										return;
-									}
-									$('.ask-hint').hide();
-									if (countHanzi(val) < 10) {
-										$('.ask-hint').text('咨询问题，不得少于10个字符！')
-												.show();
-										return;
-									}
-									var $this = $(this);
-									var state = $this.attr('attr-state') - 0;
-									if (state == 0) {
-										$this.attr('attr-state', '1').addClass(
-												'u-btn-disa').text('提交中...');
-										$
-												.ajax({
-													type : 'POST',
-													url : '/question/ajax/postQuestion7.aspx',
-													contentType : 'application/x-www-form-urlencoded; charset=utf-8',
-													cache : false,
-													data : 'askt=&askc=' + val
-															+ '&phone=&t_code='
-															+ tcode,
-													success : function(data) {
-														postSuccessDo(data);
-													},
-													error : function(data) {
-														$('.ask-hint')
-																.text(
-																		'服务器正忙，请稍后提交，或直接电话咨询律师！')
-																.show();
-													}
-												});
-
-									}
-								} else {
-									gourl('http://www.66law.cn/question/add.aspx?t_code='
-											+ tcode);
-								}
-							});
-			function countHanzi(str) {
-				var reg = /[\u4E00-\u9FA5]/, len = str.length, arr = str
-						.split('');
-				var num = 0;
-				for (var i = 0; i < len; i++) {
-					if (reg.test(arr[i])) {
-						num++;
-					}
-				}
-				return num;
-			}
-		});
-		//跳转链接
-		function gourl(url, self) {
-			if (self == undefined) {
-				if ($('#hidurl').length == 0) {
-					$('body').append(
-							'<div id="hidurl" style="display:;"></div>');
-				}
-				$('#hidurl')
-						.html(
-								'<form id="clickUrl" name="clickUrl" action="' + url + '"  target="_blank" method="post" style="display:none;"></form>');
-				$('#clickUrl').submit();
-			} else {
-				parent.location.href = url;
-			}
-		}
-
-		//提交成功
-		function postSuccessDo(data) {
-			var e = $(data).find('r');
-			if (e.length > 0) {
-				var v = $(data).find('s').text();
-
-				if (getint(e.text()) == 1) {
-					$('#_fm').html('提交成功，正在转至成功页面！');
-					parent.location.href = v;
-					return;
-				} else {
-					alert(v);
-					$('#piaofu-btn').attr('attr-state', '0').removeClass(
-							'u-btn-disa').text('提交咨询');
-				}
-				isNowPost = false;
-				$('#_fbt').attr('class', 'fd_btn');
-			}
-		}
-	</script>
 	<script type="text/javascript">
 		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://"
 				: " http://");

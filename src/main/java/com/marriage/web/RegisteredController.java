@@ -1,4 +1,4 @@
-package com.springmvc.controller;
+package com.marriage.web;
 
 import java.util.HashMap;
 import java.util.Map;

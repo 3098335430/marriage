@@ -5,6 +5,7 @@ com\marriage\web\LawController.class
 com\marriage\entity\Case.class
 com\marriage\exception\AppointException.class
 com\marriage\exception\RepeatAppointException.class
+com\marriage\web\RegisteredController.class
 com\marriage\dao\DocumentDao.class
 com\marriage\entity\Law.class
 com\marriage\enums\AppointStateEnum.class
@@ -12,7 +13,7 @@ com\marriage\service\impl\DocumentServiceImpl.class
 com\marriage\entity\User.class
 com\marriage\entity\Document.class
 com\marriage\service\LawService.class
-com\springmvc\controller\RegisteredController.class
+com\marriage\web\LoginController.class
 com\marriage\exception\NoNumberException.class
 com\marriage\service\impl\UserServiceImpl.class
 com\marriage\service\impl\CaseServiceImpl.class
@@ -31,4 +32,3 @@ com\marriage\web\CaseController.class
 com\marriage\service\CaseService.class
 com\marriage\web\AdviceController.class
 com\marriage\dao\LawDao.class
-com\springmvc\controller\LoginController.class

@@ -22,6 +22,8 @@ E:\项目\template-marriage\marriage\src\main\java\com\marriage\exception\Repeat
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\service\DocumentService.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\service\impl\CaseServiceImpl.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\web\RegisteredController.java
+E:\项目\template-marriage\marriage\src\main\java\com\marriage\web\ResultController.java
+E:\项目\template-marriage\marriage\src\main\java\com\marriage\web\ContentController.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\entity\Page.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\web\DocumentController.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\service\impl\LawServiceImpl.java

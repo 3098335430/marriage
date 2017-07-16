@@ -51,7 +51,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<input type="hidden" value="${curr }" id="curr">
 	<input type="hidden" value="${countSize }" id="cs">
 	<div id="header">
-		<img class="logo_img" alt="" src="static/img/logo.png"> 
+		<img class="logo_img" alt="" src="static/img/logo1.png"> 
 		<span class="wel_word">婚姻法</span>
 		 <%@ include file="/WEB-INF/include/manager-info.jsp" %>
 	</div>

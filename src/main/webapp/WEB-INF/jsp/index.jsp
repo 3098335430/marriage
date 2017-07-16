@@ -48,8 +48,8 @@ body, button, input, select, textarea {
 				<div class="fr w680 pr z-10">
 					<div class="m-hd-seek">
 						<p class="clearfix">
-							<a href="detailDocumentWord.do?title=裁定书" class="btn-blue2 fr"
-								onclick="search_click();">搜索</a> <input type="text" class="s-wb"
+							<a href="user/detailDocumentWord.do?title=裁定书" class="btn-blue2 fr"
+								>搜索</a> <input type="text" class="s-wb"
 								placeholder="请输入您想要查找的内容" id="top-seek" />
 						</p>
 					</div>

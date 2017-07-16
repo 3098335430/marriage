@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,14 +21,11 @@ public class LoginController {
 	@Autowired
     private UserService userService;
 	// 路径参数{name}填入用户名，{pass}填入密码。我们设置为GET请求。
-	@RequestMapping(value = "/login_get.json/{name}/{pass}", method = RequestMethod.GET)
+	@RequestMapping(value = "/login_get.json", method = RequestMethod.POST)
 	@ResponseBody
 	// 当使用@RequestMapping URI template 样式映射时， 即 /login_get.json/{name}/{pass},
 	// 这时的name和pass可通过 @Pathvariable注解绑定它传过来的值到方法的参数上。
-	public Object login(@PathVariable String name, @PathVariable String pass) {
-		User user=new User();
-		user.setUsername(name);
-		user.setPassword(pass);
+	public Object login(@ModelAttribute User user) {
 		User resultUser=userService.login(user);
 		if(resultUser!=null) {
 	        return user;

@@ -50,7 +50,8 @@
 		select count(1)
 		from document
 	</select>
-	<select id="getByWord" resultType="Document" parameterType="String">
+	<select id="getByWord" resultType="Document" parameterType="string">
 	SELECT did,title,content from document WHERE title LIKE #{title}
 	</select>
+	
 </mapper>

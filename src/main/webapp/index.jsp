@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>首页</title>
+<%@ include file="/WEB-INF/include/base.jsp"%>
 </head>
 <body>
-<jsp:forward page="user/index.do"></jsp:forward>
+<jsp:forward page="pages/user/login.jsp"></jsp:forward>
 </body>
 </html>

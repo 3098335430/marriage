@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -120,13 +121,18 @@ public class UserController {
 	    return "listDocument";
 	}
 	@RequestMapping("detailDocumentWord")
-	public String detailDocumentWord(String title,HttpServletRequest request) throws Exception{
+	public String detailDocumentWord(String title,HttpServletRequest request) 
+				throws Exception{
 		request.setCharacterEncoding("UTF-8");
-		List<Document> document=documentService.getByWord(title);
+		String key = "%"+title+"%";
+		key = new String(key.getBytes("ISO-8859-1"), "UTF-8");
+		
+		List<Document> document=documentService.getByWord(key);
 		request.setAttribute("document", document);
-		System.out.println(document);
+		
 	    return "detailDocumentWord";
 	}
+	
 	@RequestMapping("listAdvice")
 	public String getlistAdvice(HttpServletRequest request){
 		String curr = (String)request.getParameter("curr");

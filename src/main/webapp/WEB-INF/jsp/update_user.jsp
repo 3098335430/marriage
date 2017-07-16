@@ -5,8 +5,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>帐户详情</title>
+<%@ include file="/WEB-INF/include/base.jsp"%>
 </head>
 <body>
+<div id="header">
+		<img class="logo_img" alt="" src="static/img/logo.png"> 
+		<span class="wel_word">婚姻法</span>
+		 <%@ include file="/WEB-INF/include/manager-info.jsp" %>
+	</div>
+	<div id="main">
+	<center>
+	<br><br><br>
 	<form action="/user/updateUser" method="post">
 			<label>id：</label> 
 			<input value="${ user.userId}" class="itxt"
@@ -22,5 +31,7 @@
 		 <input type="submit" value="添加" id="sub_btn" />
 
 		</form>
+		</center>
+		</div>
 </body>
 </html>

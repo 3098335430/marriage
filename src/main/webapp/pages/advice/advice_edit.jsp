@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>添加建议</title>
+<%@ include file="/WEB-INF/include/base.jsp"%>
 <style type="text/css">
 .login_form {
 	height: 420px;
@@ -24,6 +25,14 @@
 
 </head>
 <body>
+<div id="header">
+		<img class="logo_img" alt="" src="static/img/logo.png"> 
+		<span class="wel_word">婚姻法</span>
+		 <%@ include file="/WEB-INF/include/manager-info.jsp" %>
+	</div>
+	<div id="main">
+	<center>
+	<br><br><br>
 	<div class="form">
 		<form action="/advice/addAdvice.do" method="post">
 			<label>建议：</label> 
@@ -34,11 +43,8 @@
 
 		</form>
 	</div>
-
-	</div>
-	</div>
-	</div>
-	</div>
+</center>
+</div>
 	<div id="bottom">
 		<span> 服务外包;2017 </span>
 	</div>

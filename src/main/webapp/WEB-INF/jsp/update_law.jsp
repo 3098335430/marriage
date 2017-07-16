@@ -4,9 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>修改法律</title>
+<%@ include file="/WEB-INF/include/base.jsp"%>
 </head>
 <body>
+<div id="header">
+		<img class="logo_img" alt="" src="static/img/logo.png"> 
+		<span class="wel_word">婚姻法</span>
+		 <%@ include file="/WEB-INF/include/manager-info.jsp" %>
+	</div>
+	<div id="main">
+	<center>
+	<br><br><br>
 	<form action="/law/updateLaw" method="post">
 			<label>lid：</label> 
 			<input value="${law.lid}" class="itxt"
@@ -19,5 +28,7 @@
 		 <input type="submit" value="添加" id="sub_btn" />
 
 		</form>
+		</center>
+		</div>
 </body>
 </html>

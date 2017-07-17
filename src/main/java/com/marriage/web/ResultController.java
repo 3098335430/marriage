@@ -3,19 +3,22 @@ package com.marriage.web;
 import java.util.HashMap;
 import java.util.Map;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.marriage.entity.User;
 /**
  * 根据类型返回判决结果
  */
 @Controller
 @RequestMapping("ResultController")
 public class ResultController {
-		@RequestMapping(value = "/result.json/{cid}", method = RequestMethod.GET)
+		@RequestMapping(value = "/result.json", method = RequestMethod.POST)
 		@ResponseBody
-		public Object result(@PathVariable Integer cid) {
+		public Object result(@ModelAttribute Integer cid) {
 			Map<String, String> map = new HashMap<String, String>();
 		if(cid<=26) {
 		       map.put("msg","根据相关婚姻法规定,离婚败诉可能性更大");

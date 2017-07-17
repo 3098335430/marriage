@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.marriage.dao.WordDao">
+	<!-- 目的：为dao接口方法提供sql语句配置 -->
+	<select id="queryById" resultType="Word" parameterType="long">
+		<!-- 具体的sql -->
+		SELECT
+			wid,
+			title,
+			content,
+			word
+		FROM
+			word_success
+		WHERE
+			wid = #{wid}
+	</select>
+	
+	<select id="getByWord" resultType="Word">
+		select* ,(length(#{word})-length('#{keyword}')) as rn 
+		from word_success 
+		where `word` like #{keyword}
+		order by rn 
+		LIMIT 1;
+	</select>
+</mapper>

@@ -17,11 +17,11 @@
 			wid = #{wid}
 	</select>
 	
-	<select id="getByWord" resultType="Word">
-		select* ,(length(#{word})-length('#{keyword}')) as rn 
+	<select id="getByWord" resultType="Word" parameterType="string">
+		select* ,(length(word)-length(#{keyword})) as rn 
 		from word_success 
-		where `word` like #{keyword}
+		where word like #{keyword}
 		order by rn 
-		LIMIT 1;
+		LIMIT 1
 	</select>
 </mapper>

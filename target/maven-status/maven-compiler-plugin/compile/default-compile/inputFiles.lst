@@ -1,11 +1,15 @@
+E:\项目\template-marriage\marriage\src\main\java\com\marriage\service\impl\WordServiceImpl.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\service\UserService.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\service\impl\UserServiceImpl.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\entity\Advice.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\exception\NoNumberException.java
+E:\项目\template-marriage\marriage\src\main\java\com\marriage\service\WordService.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\dao\UserDao.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\service\impl\AdviceServiceImpl.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\dao\CaseDao.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\dao\DocumentDao.java
+E:\项目\template-marriage\marriage\src\main\java\com\marriage\dao\WordDao.java
+E:\项目\template-marriage\marriage\src\main\java\com\marriage\entity\Word.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\exception\AppointException.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\entity\Law.java
 E:\项目\template-marriage\marriage\src\main\java\com\marriage\web\AdviceController.java

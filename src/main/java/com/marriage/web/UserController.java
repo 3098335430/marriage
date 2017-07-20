@@ -49,12 +49,17 @@ public class UserController {
 	@RequestMapping("listUser")
 	public String getlist(HttpServletRequest request){
 		String curr = (String)request.getParameter("curr");
-		Integer begin = 0;
-		Integer end = 2;
+		Integer begin =1;
+		Integer end = 5;
 		if(curr != null){
 			Integer currPage = Integer.parseInt(curr);
+			if(currPage>1){
 			begin = 2 * (currPage - 1);
-			end = 2 * (currPage);
+			end = 2 * (currPage);}
+			else{
+				begin=1;
+				end=3;
+			}
 		}else{
 			curr = "1";
 		}
@@ -74,12 +79,17 @@ public class UserController {
 	@RequestMapping("listCase")
 	public String getlistCase(HttpServletRequest request){
 		String curr = (String)request.getParameter("curr");
-		Integer begin = 0;
-		Integer end = 2;
+		Integer begin = 1;
+		Integer end = 5;
 		if(curr != null){
 			Integer currPage = Integer.parseInt(curr);
+			if(currPage>1){
 			begin = 2 * (currPage - 1);
-			end = 2 * (currPage);
+			end = 2 * (currPage);}
+			else{
+				begin=1;
+				end=3;
+			}
 		}else{
 			curr = "1";
 		}
@@ -98,12 +108,17 @@ public class UserController {
 	@RequestMapping("listDocument")
 	public String getlistDocument(HttpServletRequest request){
 		String curr = (String)request.getParameter("curr");
-		Integer begin = 0;
-		Integer end = 2;
+		Integer begin = 1;
+		Integer end = 5;
 		if(curr != null){
 			Integer currPage = Integer.parseInt(curr);
+			if(currPage>1){
 			begin = 2 * (currPage - 1);
-			end = 2 * (currPage);
+			end = 2 * (currPage);}
+			else{
+				begin=1;
+				end=3;
+			}
 		}else{
 			curr = "1";
 		}
@@ -136,12 +151,17 @@ public class UserController {
 	@RequestMapping("listAdvice")
 	public String getlistAdvice(HttpServletRequest request){
 		String curr = (String)request.getParameter("curr");
-		Integer begin = 0;
-		Integer end = 2;
+		Integer begin = 1;
+		Integer end = 5;
 		if(curr != null){
 			Integer currPage = Integer.parseInt(curr);
+			if(currPage>1){
 			begin = 2 * (currPage - 1);
-			end = 2 * (currPage);
+			end = 2 * (currPage);}
+			else{
+				begin=1;
+				end=3;
+			}
 		}else{
 			curr = "1";
 		}
@@ -161,12 +181,17 @@ public class UserController {
 	@RequestMapping("listLaw")
 	public String getlistLaw(HttpServletRequest request){
 		String curr = (String)request.getParameter("curr");
-		Integer begin = 0;
-		Integer end = 2;
+		Integer begin = 1;
+		Integer end = 5;
 		if(curr != null){
 			Integer currPage = Integer.parseInt(curr);
+			if(currPage>1){
 			begin = 2 * (currPage - 1);
-			end = 2 * (currPage);
+			end = 2 * (currPage);}
+			else{
+				begin=1;
+				end=3;
+			}
 		}else{
 			curr = "1";
 		}

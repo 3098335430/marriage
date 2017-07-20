@@ -13,45 +13,45 @@
              CaseId,
              label
 		FROM
-			document
+			[dbo].[document]
 		WHERE
 			did = #{did}
 	</select>
 	
 	<select id="queryAll" resultType="Document">
-		SELECT
-			did ,
+	
+    select top (#{limit}-#{offset}+1) 
+           did ,
              title,
              content,
              CaseId,
              label
-		FROM
-			document
-		ORDER BY
-			did
-		LIMIT #{offset}, #{limit}
+          from [dbo].[document] 
+          where did not in (  
+            select top (#{offset}-1) did from [dbo].[document]  
+          ) 
 	</select>
  <!-- 添加一条新记录,默认返回值是int，无法修改 -->  
     <insert id="saveDocument"   parameterType="Document" >  
-        insert into document(title,content,label) values(#{title},#{content},#{label})  
+        insert into [dbo].[document](title,content,label) values(#{title},#{content},#{label})  
     </insert>  
 	<update id="updateDocument" parameterType="Document">
-		update document
+		update [dbo].[document]
 		set title = #{title},content=#{content},CaseId=#{CaseId},label=#{label}
 		where did = #{did}
 	</update>
 	
 	<delete id="delDocument" parameterType="int">
-		delete from document
+		delete from [dbo].[document]
 		where did = #{did}
 	</delete>
 	
 	<select id="countDocument" resultType="int">
 		select count(1)
-		from document
+		from [dbo].[document]
 	</select>
 	<select id="getByWord" resultType="Document" parameterType="string">
-	SELECT did,title,content from document WHERE title LIKE #{title}
+	SELECT did,title,content from [dbo].[document] WHERE title LIKE #{title}
 	</select>
 	
 </mapper>

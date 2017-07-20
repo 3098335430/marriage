@@ -12,16 +12,15 @@
 			content,
 			word
 		FROM
-			word_success
+			[dbo].[word_success]
 		WHERE
 			wid = #{wid}
 	</select>
 	
 	<select id="getByWord" resultType="Word" parameterType="string">
-		select* ,(length(word)-length(#{keyword})) as rn 
-		from word_success 
+		select top 1 * 
+		from [dbo].[word_success]
 		where word like #{keyword}
-		order by rn 
-		LIMIT 1
+		order by (len(word)-len(#{keyword}))
 	</select>
 </mapper>

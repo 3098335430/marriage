@@ -11,39 +11,38 @@
             law,
             CaseId
 		FROM
-			law
+			[dbo].[law]
 		WHERE
 			lid = #{lid}
 	</select>
 	
 	<select id="queryAll" resultType="Law">
-		SELECT
-			lid,
+    select top (#{limit}-#{offset}+1) 
+           lid,
             law,
             CaseId
-		FROM
-			law
-		ORDER BY
-			lid
-		LIMIT #{offset}, #{limit}
+          from [dbo].[law]
+          where lid not in (  
+            select top (#{offset}-1) lid from [dbo].[law]  
+          ) 
 	</select>
  <!-- 添加一条新记录,默认返回值是int，无法修改 -->  
     <insert id="saveLaw"   parameterType="Law" >  
-        insert into law(law) values(#{law})  
+        insert into [dbo].[law](law) values(#{law})  
     </insert>  
 	<update id="updateLaw" parameterType="Law">
-		update law
+		update [dbo].[law]
 		set law = #{law}
 		where lid = #{lid}
 	</update>
 	
 	<delete id="delLaw" parameterType="int">
-		delete from law
+		delete from [dbo].[law]
 		where lid = #{lid}
 	</delete>
 	
 	<select id="countLaw" resultType="int">
 		select count(1)
-		from law
+		from [dbo].[law]
 	</select>
 </mapper>

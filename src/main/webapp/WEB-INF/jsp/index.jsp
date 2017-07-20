@@ -272,62 +272,10 @@ body, button, input, select, textarea {
 					</div>
 				</div>
 			</div>
-			<!--right-->
-			<div class="r-w225">
 
-				<div id="floatTag">&nbsp;</div>
-
-				<div id="ctn-floatNav" class="sidebar sidebar-fixed"
-					style="display: none;">
-					<div class="bar-k">
-						<div class="s-l">
-							<div class="s-l2"></div>
-						</div>
-						<div class="s-mulu">
-							<div class="s-ml-k">
-								<div class="s-zj">
-									<em></em><a href="#第一章 总 则" class="z-ml" title="第一章 总 则">第一章
-										总 则</a>
-								</div>
-								<div class="s-zj">
-									<em></em><a href="#第二章 结 婚" class="z-ml" title="第二章 结 婚">第二章
-										结 婚</a>
-								</div>
-								<div class="s-zj">
-									<em></em><a href="#第三章 家庭关系" class="z-ml" title="第三章 家庭关系">第三章
-										家庭关系</a>
-								</div>
-								<div class="s-zj">
-									<em></em><a href="#第四章 离 婚" class="z-ml" title="第四章 离 婚">第四章
-										离 婚</a>
-								</div>
-								<div class="s-zj">
-									<em></em><a href="#第五章 救助措施与法律责任" class="z-ml"
-										title="第五章 救助措施与法律责任">第五章 救助措施与法律责任</a>
-								</div>
-								<div class="s-zj">
-									<em></em><a href="#第六章 附 则" class="z-ml" title="第六章 附 则">第六章
-										附 则</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
-	<!--footer-->
-	<div id="footer"></div>
-<script type="text/javascript" src="static/script/jquery.mousewheel.js"></script>
-<script type="text/javascript" src="static/script/tiaoli.js"></script>
 
-	<script type="text/javascript">
-		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://"
-				: " http://");
-		document
-				.write(unescape("%3Cscript src='"
-						+ _bdhmProtocol
-						+ "hm.baidu.com/h.js%3Fac3abb01a9ad71f2dc9f7344e138c993' type='text/javascript'%3E%3C/script%3E"));
-	</script>
+
 </body>
 </html>

@@ -11,39 +11,39 @@
 			CaseId,
 			advice
 		FROM
-			advice
+			[dbo].[advice]
 		WHERE
 			aid = #{aid}
 	</select>
 	
 	<select id="queryAll" resultType="Advice">
-		SELECT
-			aid,
+          select top (#{limit}-#{offset}+1) 
+            aid,
 			CaseId,
 			advice
-		FROM
-			advice
-		ORDER BY
-			aid
-		LIMIT #{offset}, #{limit}
+          from [dbo].[advice] 
+          where aid not in (  
+            select top (#{offset}-1) aid from [dbo].[advice]   
+          ) 
+
 	</select>
  <!-- 添加一条新记录,默认返回值是int，无法修改 -->  
     <insert id="saveAdvice"   parameterType="Advice" >  
         insert into advice(advice) values(#{advice})  
     </insert>  
 	<update id="updateAdvice" parameterType="Advice">
-		update advice
+		update [dbo].[advice]
 		set advice = #{advice}
 		where aid = #{aid}
 	</update>
 	
 	<delete id="delAdvice" parameterType="int">
-		delete from advice
+		delete from [dbo].[advice]
 		where aid = #{aid}
 	</delete>
 	
 	<select id="countAdvice" resultType="int">
 		select count(1)
-		from advice
+		from [dbo].[advice]
 	</select>
 </mapper>

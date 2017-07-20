@@ -6,35 +6,34 @@
 	<!-- 目的：为dao接口方法提供sql语句配置 -->
 	<select id="queryById" resultType="Case" parameterType="long">
 		<!-- 具体的sql -->
-	SELECT cid,type FROM `case` WHERE cid=#{cid}
+	SELECT cid,type FROM [dbo].[case] WHERE cid=#{cid}
 	</select>
 	
 	<select id="queryAll" resultType="Case">
-		SELECT
-			cid,
+		    select top (#{limit}-#{offset}+1) 
+            cid,
 			type
-		FROM
-			case
-		ORDER BY
-			cid
-		LIMIT #{offset}, #{limit}
+          from [dbo].[case] 
+          where cid not in (  
+            select top (#{offset}-1) cid from [dbo].[case]  
+          ) 
 	</select>
  <!-- 添加一条新记录,默认返回值是int，无法修改 -->  
     <insert id="saveCase"   parameterType="Case" >  
-        insert into case(type) values(#{type})  
+        insert into [dbo].[case](type) values(#{type})  
     </insert>  
 	<update id="updateCase" parameterType="Case">
-		update case
+		update [dbo].[case]
 		set type = #{type}
 		where cid = #{cid}
 	</update>
 	
 	<delete id="delCase" parameterType="int">
-		delete from case
+		delete from [dbo].[case]
 		where cid = #{cid}
 	</delete>
 	
 	<select id="countCase" resultType="int">
-		SELECT COUNT(*) from `case`
+		SELECT COUNT(*) from [dbo].[case]
 	</select>
 </mapper>

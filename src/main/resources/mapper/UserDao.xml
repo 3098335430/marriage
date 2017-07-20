@@ -11,21 +11,16 @@
 			username,
 			password
 		FROM
-			user
+			[db_owner].[user]
 		WHERE
 			user_id = #{userId}
 	</select>
 	
 	<select id="queryAll" resultType="User">
-		SELECT
-			user_id,
-			username,
-			password
-		FROM
-			user
-		ORDER BY
-			user_id
-		LIMIT #{offset}, #{limit}
+		select top (#{limit}-#{offset}+1) user_id,username,password from [db_owner].[user]  
+             where user_id not in (  
+                select top (#{offset}-1) user_id from [db_owner].[user]   
+               ) 
 	</select>
 	<select id="getUserByUsernameAndPassword" resultType="User" parameterType="User">
 		<!-- 具体的sql -->
@@ -34,7 +29,7 @@
 			username,
 			password
 		FROM
-			user
+			[db_owner].[user]
 		WHERE
 			username=#{username}
 			AND
@@ -48,27 +43,27 @@
 			username,
 			password
 		FROM
-			user
+			[db_owner].[user]
 		WHERE
 			username=#{username}
 	</select>
  <!-- 添加一条新记录,默认返回值是int，无法修改 -->  
     <insert id="saveUser"   parameterType="User" >  
-        insert into user(username,password) values(#{username},#{password})  
+        insert into [db_owner].[user](username,password) values(#{username},#{password})  
     </insert>  
 	<update id="updateUser" parameterType="User">
-		update user
+		update [db_owner].[user]
 		set password = #{password}, username = #{username}
 		where user_id = #{userId}
 	</update>
 	
 	<delete id="delUser" parameterType="int">
-		delete from user
+		delete from [db_owner].[user]
 		where user_id = #{userId}
 	</delete>
 	
 	<select id="countUser" resultType="int">
 		select count(1)
-		from user
+		from [db_owner].[user]
 	</select>
 </mapper>

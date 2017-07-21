@@ -29,7 +29,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  var curr = $("#curr").val();
 		  if(curr > 1){
 			  
-		  	location.href="/user/listUser?curr=" + (curr - 1);
+		  	location.href="user/listUser?curr=" + (curr - 1);
 		  }
 	  });
 			
@@ -40,7 +40,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			if(curr - 1 + 1 >= cs){
 				
 			}else{
-				location.href="/user/listUser?curr=" + (curr - 1 + 2);
+				location.href="user/listUser?curr=" + (curr - 1 + 2);
 				
 			}
 	  });

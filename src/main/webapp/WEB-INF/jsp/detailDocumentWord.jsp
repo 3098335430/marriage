@@ -11,29 +11,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <meta charset="UTF-8">
 <title>经典案例</title>
 <%@ include file="/WEB-INF/include/base.jsp"%>
-<script type="text/javascript">
-   $(function(){ 
-	  $("#up").click(function(){
-		  var curr = $("#curr").val();
-		  if(curr > 1){
-			  
-		  	location.href="/user/listDocument?curr=" + (curr - 1);
-		  }
-	  });
-			
-		$("#down").click(function(){
-			var curr = $("#curr").val();
-			var cs = $("#cs").val();
-			
-			if(curr - 1 + 1 >= cs){
-				
-			}else{
-				location.href="/user/listDocument?curr=" + (curr - 1 + 2);
-				
-			}
-	  });
-   })
-</script>
 </head>
 <body>
 	<input type="hidden" value="${curr }" id="curr">
@@ -60,17 +37,14 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<tr>
 							<td>${fn:substring(document.title,0,15)}</td>
 							<td>${fn:substring(document.content,0,15)}</td>
+							<td>
+							<a  href="document/detailDocument?did=${document.did}">查看详情</a>
+							</td>
 						</tr>
 					</c:forEach>
 
 				</c:otherwise>
 			</c:choose>
-
-			<tr>
-				<td></td>
-				<td><button id="up">上一页</button></td>
-				<td><button id="down">下一页</button></td>
-			</tr>
 		</table>
 
 

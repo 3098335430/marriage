@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,7 +40,7 @@
 	<center>
 	<br><br><br>
 	<div class="form.itxt">
-		<form action="/document/addDocument.do" method="post">
+		<form action="document/addDocument.do" method="post">
 			<label>文档名：</label> 
 			<input value="${param.title }" class="itxt"
 				type="text" autocomplete="off" tabindex="1" name="title" />

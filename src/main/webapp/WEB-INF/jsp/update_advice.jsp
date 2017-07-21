@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -16,16 +20,17 @@
 	<div id="main">
 	<center>
 	<br><br><br>
-	<form action="/advice/updateAdvice" method="post">
+	<form action="advice/updateAdvice" method="post">
 			<label>aid：</label> 
 			<input value="${advice.aid}" class="itxt"
 				type="text" readonly="readonly"
-				tabindex="1" name="aid" /> <br /> <br /> 
+				tabindex="1" name="aid" style="width:800px;height:80px"/> <br /> <br /> 
 			<label>建议：</label> 
 			<input value="${ advice.advice}" class="itxt"
 				type="text" placeholder="" autocomplete="off"
-				tabindex="1" name="advice" /> <br /> <br /> 
-		 <input type="submit" value="添加" id="sub_btn" />
+				tabindex="1" name="advice" 
+				style="width:800px;height:80px"/> <br /> <br /> 
+		 <input type="submit" value="修改" id="sub_btn" />
 
 		</form>
 		</center>

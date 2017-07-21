@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,7 +38,7 @@
 	<center>
 	<br><br><br>
 	<div class="form">
-		<form action="/law/addlaw.do" method="post">
+		<form action="law/addlaw.do" method="post">
 			<label>法律：</label> 
 			<input value="${param.law }" class="itxt"
 				type="text" autocomplete="off" tabindex="1" name="title" />

@@ -50,7 +50,7 @@ public class UserController {
 	public String getlist(HttpServletRequest request){
 		String curr = (String)request.getParameter("curr");
 		Integer begin =1;
-		Integer end = 5;
+		Integer end = 4;
 		if(curr != null){
 			Integer currPage = Integer.parseInt(curr);
 			if(currPage>1){
@@ -80,7 +80,7 @@ public class UserController {
 	public String getlistCase(HttpServletRequest request){
 		String curr = (String)request.getParameter("curr");
 		Integer begin = 1;
-		Integer end = 5;
+		Integer end = 4;
 		if(curr != null){
 			Integer currPage = Integer.parseInt(curr);
 			if(currPage>1){
@@ -109,7 +109,7 @@ public class UserController {
 	public String getlistDocument(HttpServletRequest request){
 		String curr = (String)request.getParameter("curr");
 		Integer begin = 1;
-		Integer end = 5;
+		Integer end = 4;
 		if(curr != null){
 			Integer currPage = Integer.parseInt(curr);
 			if(currPage>1){
@@ -152,7 +152,7 @@ public class UserController {
 	public String getlistAdvice(HttpServletRequest request){
 		String curr = (String)request.getParameter("curr");
 		Integer begin = 1;
-		Integer end = 5;
+		Integer end = 4;
 		if(curr != null){
 			Integer currPage = Integer.parseInt(curr);
 			if(currPage>1){
@@ -182,7 +182,7 @@ public class UserController {
 	public String getlistLaw(HttpServletRequest request){
 		String curr = (String)request.getParameter("curr");
 		Integer begin = 1;
-		Integer end = 5;
+		Integer end = 4;
 		if(curr != null){
 			Integer currPage = Integer.parseInt(curr);
 			if(currPage>1){

@@ -38,6 +38,7 @@ public class DocumentController {
 	@RequestMapping("updateDocument")
 	public String updateDocument(Model model,Document document){
 		documentService.updateDocument(document);
+		System.out.println(document);
 	    return "index";
 	}
 	

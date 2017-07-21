@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,7 +39,7 @@
 	<center>
 	<br><br><br>
 	<div class="form">
-		<form action="/user/addUser.do" method="post">
+		<form action="user/addUser.do" method="post">
 			<label>用户名称：</label> 
 			<input value="${param.username }" class="itxt"
 				type="text" placeholder="请输入3-16位的用户名" autocomplete="off"

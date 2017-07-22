@@ -28,6 +28,7 @@
 		  var password = $("[name=password]").val();
 		  var repwd = $("[name=repwd]").val();;
 		  var code = $("[name=code]").val();  
+	
 	  });  
 
 </script>

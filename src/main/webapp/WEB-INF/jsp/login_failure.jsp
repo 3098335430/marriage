@@ -5,13 +5,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>登陆失败</title>
+<%@ include file="/WEB-INF/include/base.jsp"%>
 </head>
 <body>
 <br><br><br><br><br><br><br>
 <center>
-<img src="/static/img/wuya-login.PNG"/>
+<img src="static/img/wuya-login.PNG"/>
 <br>
-<a href="/pages/user/login.jsp">尝试重新登陆！</a>
+<a href="pages/user/login.jsp">尝试重新登陆！</a>
 </center>
 
 

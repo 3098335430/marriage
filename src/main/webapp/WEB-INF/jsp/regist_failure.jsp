@@ -4,11 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>注册失败</title>
+<%@ include file="/WEB-INF/include/base.jsp"%>
 </head>
 <body>
 <center>
-<img src="/static/img/wuya-regist.PNG"/>
+<img src="static/img/wuya-regist.PNG"/>
 <br>
 <a href="pages/user/regist.jsp">重新注册</a>
 </center>

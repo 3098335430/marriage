@@ -24,11 +24,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			<label>lid：</label> 
 			<input value="${law.lid}" class="itxt"
 				type="text" readonly="readonly"
-				tabindex="1" name="aid" style="width:800px;height:80px"/> <br /> <br /> 
+				tabindex="1" name="lid" style="width:800px;height:80px"/> <br /> <br /> 
 			<label>法律：</label> 
-			<input value="${ law.law}" class="itxt"
+			<input value="${law.lawContent}" class="itxt"
 				type="text" placeholder="" autocomplete="off"
-				tabindex="1" name="law" style="width:800px;height:80px"/> <br /> <br /> 
+				tabindex="1" name="lawContent" style="width:800px;height:80px"/> <br /> <br /> 
 		 <input type="submit" value="修改" id="sub_btn" />
 
 		</form>

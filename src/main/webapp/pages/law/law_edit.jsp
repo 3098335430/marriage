@@ -38,10 +38,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<center>
 	<br><br><br>
 	<div class="form">
-		<form action="law/addlaw.do" method="post">
+		<form action="law/addLaw" method="post">
 			<label>法律：</label> 
-			<input value="${param.law }" class="itxt"
-				type="text" autocomplete="off" tabindex="1" name="title" />
+			<input value="${param.lawContent }" class="itxt"
+				type="text" autocomplete="off" tabindex="1" name="lawContent" />
 				 <br /> <br /> 
 		 <input type="submit" value="添加" id="sub_btn" />
 

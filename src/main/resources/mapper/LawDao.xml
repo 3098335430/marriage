@@ -8,7 +8,7 @@
 		<!-- 具体的sql -->
 		SELECT
 			lid,
-            law,
+            lawContent,
             CaseId
 		FROM
 			[dbo].[law]
@@ -19,7 +19,7 @@
 	<select id="queryAll" resultType="Law">
     select top (#{limit}-#{offset}+1) 
            lid,
-            law,
+           lawContent,
             CaseId
           from [dbo].[law]
           where lid not in (  
@@ -28,11 +28,11 @@
 	</select>
  <!-- 添加一条新记录,默认返回值是int，无法修改 -->  
     <insert id="saveLaw"   parameterType="Law" >  
-        insert into [dbo].[law](law) values(#{law})  
+        insert into [dbo].[law](lawContent) values(#{lawContent})  
     </insert>  
 	<update id="updateLaw" parameterType="Law">
 		update [dbo].[law]
-		set law = #{law}
+		set lawContent = #{lawContent}
 		where lid = #{lid}
 	</update>
 	

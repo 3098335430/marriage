@@ -2,7 +2,7 @@ package com.marriage.entity;
 
 public class Law {
 	private Integer lid;
-	private String law;
+	private String lawContent;
 	private Integer CaseId;
 	public Integer getLid() {
 		return lid;
@@ -10,26 +10,27 @@ public class Law {
 	public void setLid(Integer lid) {
 		this.lid = lid;
 	}
-	public String getLaw() {
-		return law;
-	}
-	public void setLaw(String law) {
-		this.law = law;
-	}
+
 	public Integer getCaseId() {
 		return CaseId;
 	}
 	public void setCaseId(Integer caseId) {
 		CaseId = caseId;
 	}
+	public String getLawContent() {
+		return lawContent;
+	}
+	public void setLawContent(String lawContent) {
+		this.lawContent = lawContent;
+	}
 	@Override
 	public String toString() {
-		return "Law [lid=" + lid + ", law=" + law + ", CaseId=" + CaseId + "]";
+		return "Law [lid=" + lid + ", lawContent=" + lawContent + ", CaseId=" + CaseId + "]";
 	}
-	public Law(Integer lid, String law, Integer caseId) {
+	public Law(Integer lid, String lawContent, Integer caseId) {
 		super();
 		this.lid = lid;
-		this.law = law;
+		this.lawContent = lawContent;
 		CaseId = caseId;
 	}
 	public Law() {

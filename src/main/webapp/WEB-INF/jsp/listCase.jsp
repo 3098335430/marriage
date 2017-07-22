@@ -39,8 +39,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			if(curr - 1 + 1 >= cs){
 				
 			}else{
-				location.href="user/listCase?curr=" + (curr - 1 + 2);
-				
+				if(curr=1){}
+				else{
+					location.href="user/listCase?curr=" + (curr - 1 + 2);
+
+				}				
 			}
 	  });
    })
@@ -85,7 +88,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<td></td>
 				<td><button id="up">上一页</button></td>
 				<td><button id="down">下一页</button></td>
-				<td><a href="pages/user/user_edit.jsp">添加用户</a></td>
+				<td><a href="pages/user/user_edit.jsp">添加案例</a></td>
 			</tr>
 		</table>
 

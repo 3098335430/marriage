@@ -28,7 +28,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		  var curr = $("#curr").val();
 		  if(curr > 1){
 			  
-		  	location.href="law/listLaw?curr=" + (curr - 1);
+		  	location.href="user/listLaw?curr=" + (curr - 1);
 		  }
 	  });
 			
@@ -39,8 +39,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			if(curr - 1 + 1 >= cs){
 				
 			}else{
-				location.href="law/listLaw?curr=" + (curr - 1 + 2);
-				
+				if(curr=1){}
+				else{
+					location.href="user/listLaw?curr=" + (curr - 1 + 2);
+	
+				}				
 			}
 	  });
    })
@@ -69,7 +72,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					</tr>
 					<c:forEach items="${us}" var="law">
 						<tr>
-							<td>${law.law}</td>
+							<td>${law.lawContent}</td>
 							
 							<td>
 							<a
@@ -86,7 +89,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<td></td>
 				<td><button id="up">上一页</button></td>
 				<td><button id="down">下一页</button></td>
-				<td><a href="pages/law/law_edit.jsp">添加建议</a></td>
+				<td><a href="pages/law/law_edit.jsp">添加法律</a></td>
 			</tr>
 		</table>
 

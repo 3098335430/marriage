@@ -40,8 +40,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			if(curr - 1 + 1 >= cs){
 				
 			}else{
-				location.href="user/listDocument?curr=" + (curr - 1 + 2);
-				
+				if(curr=1){}
+				else{
+					location.href="user/listDocument?curr=" + (curr - 1 + 2);
+
+				}				
 			}
 	  });
    })

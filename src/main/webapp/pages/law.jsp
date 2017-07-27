@@ -42,34 +42,11 @@ body, button, input, select, textarea {
 </head>
 <body>
 	<div class="g-hd">
-		<!--logobar1-->
-		<div class="logobar pt15">
-			<div class="w990 ma">
-				<div class="fr w680 pr z-10">
-					<div class="m-hd-seek">
-						<p class="clearfix">
-							    <a href="javascript:;" class="btn-blue2 fr"
-								onclick="search_click();">搜索</a> <input type="text" class="s-wb"
-								placeholder="请输入您想要查找的内容" id="top-seek" />
-						</p>
-					</div>
-				</div>
-				<a target="_blank" href="/" class="fl mr15"><img src="" /></a>
-				<h1 class="fl">婚姻司法</h1>
-			</div>
-		</div>
 		<!-- main nav -->
 		<div class="hd-menu mt20">
 			<ul class="w990 ma">
 				<li><a href="javascript:location.reload();">首页</a></li>
 				<li><a href="javascript:location.reload();" class="hd-mu-ct">婚姻法</a></li>
-				<li>
-				<a href="user/listDocument.do" class="">经典案例</a>
-				</li>
-				<li><a href="user/toUpdateUser.do?userId=${user.userId}" class="">个人中心</a></li>
-				<li>
-				<a href="user/index1.do" class="">后台管理</a>
-				</li>
 			</ul>
 		</div>
 	</div>
@@ -271,23 +248,5 @@ body, button, input, select, textarea {
 
 		</div>
 	</div>
-	<script type="text/javascript">
-function search_click() {
-            try {
-                var key = document.getElementById("top-seek").value;
-                if (key == "请输入您想要查找的内容") key = "";
-                if (key == "" || key.length <= 0) {
-                    window.open("http://210.29.65.96:11111/marriage/user/index.do");
-                } else {
-                    window.open("http://210.29.65.96:11111/marriage/user/detailDocumentWord.do?title=" + key );
-                }
-            } catch (e) {
-            }
-        }
-    </script>
-
-
-
-
 </body>
 </html>

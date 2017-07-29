@@ -4,7 +4,7 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -75,10 +75,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<tr>
 							<td>${user.username}</td>
 							<td>${user.password}</td>
-							
-							<td>
-							<a
-								href="user/toUpdateUser?userId=${user.userId}">修改</a></td>
+
+							<td><a href="user/toUpdateUser?userId=${user.userId}">修改</a></td>
 							<td><a class="delA"
 								href="user/delUser?userId=${user.userId}">删除</a></td>
 						</tr>
@@ -99,7 +97,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>
 
 	<div id="bottom">
-		<span> 服务外包;2017 </span>
+		<span> 婚姻司法智能咨询辅助系统;2017 </span>
 	</div>
 </body>
 </html>

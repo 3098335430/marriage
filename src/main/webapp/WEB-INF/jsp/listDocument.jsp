@@ -4,7 +4,7 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,9 +54,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<input type="hidden" value="${curr }" id="curr">
 	<input type="hidden" value="${countSize }" id="cs">
 	<div id="header">
-		<img class="logo_img" alt="" src="static/img/logo1.png"> 
-		<span class="wel_word">婚姻法</span>
-		 <%@ include file="/WEB-INF/include/manager-info.jsp" %>
+		<img class="logo_img" alt="" src="static/img/logo1.png"> <span
+			class="wel_word">婚姻法</span>
+		<%@ include file="/WEB-INF/include/manager-info.jsp"%>
 	</div>
 	<div id="main">
 		<table>
@@ -80,11 +80,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 							<td>${document.label}</td>
 							<td><a href="document/toUpdateDocument?did=${document.did}">修改</a>
 							</td>
-							<td>
-							<a class="delA" href="document/delDocument?did=${document.did}">删除</a>
-							</td>
-							<td>
-							<a  href="document/detailDocument?did=${document.did}">查看详情</a>
+							<td><a class="delA"
+								href="document/delDocument?did=${document.did}">删除</a></td>
+							<td><a href="document/detailDocument?did=${document.did}">查看详情</a>
 							</td>
 						</tr>
 					</c:forEach>
@@ -104,7 +102,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>
 
 	<div id="bottom">
-		<span> 服务外包;2017 </span>
+		<span> 婚姻司法智能咨询辅助系统;2017 </span>
 	</div>
 </body>
 </html>

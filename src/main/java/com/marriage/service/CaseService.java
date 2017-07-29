@@ -1,8 +1,6 @@
 package com.marriage.service;
 
 import java.util.List;
-
-import com.marriage.entity.Advice;
 import com.marriage.entity.Case;
 
 public interface CaseService {

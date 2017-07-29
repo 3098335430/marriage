@@ -55,7 +55,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div id="header">
 		<img class="logo_img" alt="" src="static/img/logo.png"> <span
 			class="wel_word">婚姻法</span>
-			 <%@ include file="/WEB-INF/include/manager-info.jsp" %>
+		<%@ include file="/WEB-INF/include/manager-info.jsp"%>
 	</div>
 	<div id="main">
 		<table>
@@ -73,12 +73,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 					<c:forEach items="${us}" var="law">
 						<tr>
 							<td>${law.lawContent}</td>
-							
-							<td>
-							<a
-								href="law/toUpdateLaw?lid=${law.lid}">修改</a></td>
-							<td><a class="delA"
-								href="law/delLaw?lid=${law.lid}">删除</a></td>
+
+							<td><a href="law/toUpdateLaw?lid=${law.lid}">修改</a></td>
+							<td><a class="delA" href="law/delLaw?lid=${law.lid}">删除</a></td>
 						</tr>
 					</c:forEach>
 
@@ -97,7 +94,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>
 
 	<div id="bottom">
-		<span> 服务外包;2017 </span>
+		<span> 婚姻司法智能咨询辅助系统;2017 </span>
 	</div>
 </body>
 </html>

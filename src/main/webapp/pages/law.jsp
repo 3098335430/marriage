@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <base
-href="http://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/" />
+	href="http://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,6 +20,7 @@ href="http://${pageContext.request.serverName}:${pageContext.request.serverPort}
 body, button, input, select, textarea {
 	font: 12px/20px tahoma, \5FAE\8F6F\96C5\9ED1;
 }
+
 .i-p-con5 {
 	width: 20px;
 	height: 20px;
@@ -31,6 +32,7 @@ body, button, input, select, textarea {
 	height: 20px;
 	background-position: -50px -20px;
 }
+
 .logobar h1 {
 	font-size: 22px;
 }

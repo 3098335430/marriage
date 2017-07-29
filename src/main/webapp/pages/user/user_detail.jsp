@@ -27,14 +27,12 @@
 <body>
 	<div class="form">
 		<form action="/user/addUser.do" method="post">
-			<label>用户名称：</label> 
-			<input value="${param.username }" class="itxt"
+			<label>用户名称：</label> <input value="${param.username }" class="itxt"
 				type="text" placeholder="请输入3-16位的用户名" autocomplete="off"
-				tabindex="1" name="username" /> <br /> <br /> 
-			<label>用户密码：</label>
+				tabindex="1" name="username" /> <br /> <br /> <label>用户密码：</label>
 			<input class="itxt" type="password" placeholder="请输入6-18位的密码"
 				autocomplete="off" tabindex="1" name="password" /> <br /> <br />
-		 <input type="submit" value="添加" id="sub_btn" />
+			<input type="submit" value="添加" id="sub_btn" />
 
 		</form>
 	</div>
@@ -44,7 +42,7 @@
 	</div>
 	</div>
 	<div id="bottom">
-		<span> 服务外包;2017 </span>
+		<span> 婚姻司法智能咨询辅助系统;2017 </span>
 	</div>
 </body>
 </html>

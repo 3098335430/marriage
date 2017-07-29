@@ -1,9 +1,7 @@
 package com.marriage.dao;
 
 import java.util.List;
-
 import org.apache.ibatis.annotations.Param;
-import com.marriage.entity.Document;
 import com.marriage.entity.Law;
 
 

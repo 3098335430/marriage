@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <base
-href="http://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/" />
+	href="http://${pageContext.request.serverName}:${pageContext.request.serverPort}${pageContext.request.contextPath}/" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,6 +20,7 @@ href="http://${pageContext.request.serverName}:${pageContext.request.serverPort}
 body, button, input, select, textarea {
 	font: 12px/20px tahoma, \5FAE\8F6F\96C5\9ED1;
 }
+
 .i-p-con5 {
 	width: 20px;
 	height: 20px;
@@ -31,6 +32,7 @@ body, button, input, select, textarea {
 	height: 20px;
 	background-position: -50px -20px;
 }
+
 .logobar h1 {
 	font-size: 22px;
 }
@@ -48,7 +50,7 @@ body, button, input, select, textarea {
 				<div class="fr w680 pr z-10">
 					<div class="m-hd-seek">
 						<p class="clearfix">
-							    <a href="javascript:;" class="btn-blue2 fr"
+							<a href="javascript:;" class="btn-blue2 fr"
 								onclick="search_click();">搜索</a> <input type="text" class="s-wb"
 								placeholder="请输入您想要查找的内容" id="top-seek" />
 						</p>
@@ -63,13 +65,10 @@ body, button, input, select, textarea {
 			<ul class="w990 ma">
 				<li><a href="javascript:location.reload();">首页</a></li>
 				<li><a href="javascript:location.reload();" class="hd-mu-ct">婚姻法</a></li>
-				<li>
-				<a href="user/listDocument.do" class="">经典案例</a>
-				</li>
-				<li><a href="user/toUpdateUser.do?userId=${user.userId}" class="">个人中心</a></li>
-				<li>
-				<a href="user/index1.do" class="">后台管理</a>
-				</li>
+				<li><a href="user/listDocument.do" class="">经典案例</a></li>
+				<li><a href="user/toUpdateUser.do?userId=${user.userId}"
+					class="">个人中心</a></li>
+				<li><a href="user/index1.do" class="">后台管理</a></li>
 			</ul>
 		</div>
 	</div>
